@@ -1,30 +1,32 @@
 const swCard = new Swiper(".sw-card", {
-  centeredSlides: false,
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+ // 기본값
+ centeredSlides: false,
+ slidesPerView: "auto",
+ spaceBetween: 30,
+ pagination: {
+  el: ".swiper-pagination",
+  clickable: true,
+ },
+ navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+ },
+ //  반응형
+ breakpoints: {
+  // window.width >= 0
+  0: {
+   centeredSlides: true,
+   spaceBetween: 20,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  // window.width >= 768
+  768: {
+   centeredSlides: false,
+   spaceBetween: 30,
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      centeredSlides: true,
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      centeredSlides: false,
-    },
-    1220: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      centeredSlides: false,
-    },
+  // window.width >= 1220
+  1220: {
+   centeredSlides: false,
+   spaceBetween: 30,
   },
+ },
 });
